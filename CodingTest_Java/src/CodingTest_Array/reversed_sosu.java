@@ -1,4 +1,4 @@
-package Array;
+package CodingTest_Array;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public static void main(String[] args) {
 	
 	ArrayList<Integer> answer = new ArrayList<>();
 	
-	for(int i = 0; i<n; i++) {
+	for(int i = 0; i<n; i++) {     // 숫자 뒤집기!!!
 		int tmp = arr[i]; // tmp에 넣는다
 		int res = 0;
 		while(tmp>0) {
@@ -26,14 +26,20 @@ public static void main(String[] args) {
 			res=res*10+t;
 			tmp /= 10;
 		}
-		System.out.println(res);
+		if(isPrime(res)) answer.add(res);
 	}
 	
-	
-//	for(int i = 0; i < n; i++) {
-//	}
-	
-	
-	
+	for(int x : answer) {
+	System.out.print(x+" ");
+	}
 }
+
+ public static boolean isPrime(int num) {
+	 if(num==1) return false;
+	 for(int i = 2; i < num; i++) {
+		 if(num%i==0) return false;
+	 }
+	return true;
+ }
+
 }

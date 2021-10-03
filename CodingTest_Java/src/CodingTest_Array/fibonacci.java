@@ -1,4 +1,4 @@
-package Array;
+package CodingTest_Array;
 
 import java.util.Scanner;
 
